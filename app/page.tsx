@@ -78,8 +78,9 @@ export default function Home() {
                     Våre tjenester
                   </h2>
                   <p className="max-w-[900px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    Vi tilbyr et utvalg av webutviklingstjenester for å hjelpe
-                    din virksomhet med å blomstre på nettet.
+                    Vi tilbyr et bredt spekter av webutviklingstjenester for å
+                    støtte ditt prosjekt og hjelpe virksomheten din å blomstre
+                    på nettet.
                   </p>
                 </div>
               </div>
@@ -100,13 +101,20 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">
-                        Optimalisering mot søkemonitorer
-                      </h3>
+                      <h3 className="text-xl font-bold">SEO-optimalisering</h3>
                       <p className="text-gray-500 dark:text-gray-400">
-                        Ved optimalisering mot søkemonitorer på nettet, må
+                        Forbedre din nettsides synlighet og rangering i
+                        søkemotorer for å tiltrekke flere besøkende.
                       </p>
                     </div>
+                  </div>
+                  <div className="mt-4">
+                    <a
+                      href="/tjenester"
+                      className="inline-flex items-center justify-center px-4 py-2 text-base font-medium text-white bg-black border border-transparent rounded-md hover:bg-blue-700"
+                    >
+                      Les mer
+                    </a>
                   </div>
                 </div>
                 <Image
