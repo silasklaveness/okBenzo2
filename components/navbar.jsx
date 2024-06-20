@@ -51,7 +51,7 @@ const Navbar = () => {
         <Link href="./" className="flex items-center gap-2" prefetch={false}>
           <Image src="/logo.png" alt="logo" height={50} width={50} />
           <span className="text-lg md:text-xl lg:text-2xl font-semibold">
-            FjordDev
+            OceanEdge
           </span>
         </Link>
         <nav className="hidden md:flex gap-10">
