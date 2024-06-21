@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "@/components/fjorddevbot"; // Adjust the import path as needed
 import { motion } from "framer-motion";
 
@@ -20,10 +20,30 @@ const staggerContainer = {
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
 
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.scrollY > 300) {
+      setShowScroll(true);
+    } else if (showScroll && window.scrollY <= 300) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop);
+    return () => {
+      window.removeEventListener("scroll", checkScrollTop);
+    };
+  }, [showScroll]);
 
   return (
     <div className="h-full">
@@ -373,6 +393,15 @@ export default function Home() {
             </div>
           </motion.section>
         </main>
+        <button
+          className={`fixed bottom-5 right-5 z-50 p-3 rounded-full bg-blue-500 text-white shadow-lg transition-opacity duration-300 ${
+            showScroll ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={scrollTop}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
       </div>
     </div>
   );
