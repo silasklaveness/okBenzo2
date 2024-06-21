@@ -1,9 +1,9 @@
 import connectDB from "@/app/lib/mongodb";
 import Contact from "@/app/models/contact";
 import mongoose from "mongoose";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req) {
+export async function POST(req: NextRequest) {
   const { fullname, email, message } = await req.json();
   try {
     await connectDB();
@@ -14,16 +14,27 @@ export async function POST(req) {
     });
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
-      let errorList = [];
+      let errorList: string[] = [];
       for (let e in error.errors) {
         errorList.push(error.errors[e].message);
       }
 
-      return NextResponse.json({
-        msg: errorList,
-      });
+      return NextResponse.json(
+        {
+          msg: errorList,
+          success: false,
+        },
+        { status: 400 }
+      );
     } else {
-      return NextResponse.json(error);
+      console.error("Internal server error:", error);
+      return NextResponse.json(
+        {
+          msg: ["An internal server error occurred"],
+          success: false,
+        },
+        { status: 500 }
+      );
     }
   }
 }
