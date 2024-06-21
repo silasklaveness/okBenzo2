@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,6 +12,7 @@ const ContactForm = () => {
   const [consent, setConsent] = useState(false);
   const [error, setError] = useState([]);
   const [success, setSuccess] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +20,7 @@ const ContactForm = () => {
     if (!consent) {
       setError(["Du må godta personvernerklæringen"]);
       setSuccess(false);
+      setSuccessMessage("");
       return;
     }
 
@@ -36,8 +37,9 @@ const ContactForm = () => {
     });
 
     const { msg, success } = await res.json();
-    setError(msg);
+    setError(success ? [] : msg);
     setSuccess(success);
+    setSuccessMessage(success ? msg[0] : "");
 
     if (success) {
       setFullname("");
@@ -53,7 +55,7 @@ const ContactForm = () => {
         <div className="text-center">
           <h1 className="text-3xl font-bold">Kontakt oss</h1>
           <p className="text-muted-foreground">
-            Har du et prosjekt eller spørsmål? Fyll ut følgende skjema, så vil
+            Har du et prosjekt eller spørsmål? Fyll ut følgende skjema, så vil
             vi ta kontakt med deg så snart som mulig.
           </p>
         </div>
@@ -67,7 +69,7 @@ const ContactForm = () => {
               type="text"
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
-              placeholder="Skriv in ditt navn"
+              placeholder="Skriv inn ditt navn"
               className="bg-[#2d2d2d] border-[#3f3f3f] text-white focus:border-primary focus:ring-primary"
             />
           </div>
@@ -80,7 +82,7 @@ const ContactForm = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Skriv in din epost"
+              placeholder="Skriv inn din epost"
               className="bg-[#2d2d2d] border-[#3f3f3f] text-white focus:border-primary focus:ring-primary"
             />
           </div>
@@ -126,23 +128,17 @@ const ContactForm = () => {
             Submit
           </Button>
         </form>
-        <div className="bg-slate-100 flex flex-col mt-4">
-          {error &&
-            error.map((e, index) => (
-              <div
-                key={index}
-                className={`${
-                  success
-                    ? "bg-green-700 text-white font-bold"
-                    : "bg-red-700 text-white font-bold"
-                } px-4 py-2`}
-              >
-                {e}
-              </div>
-            ))}
+        <div className="flex flex-col mt-4">
+          {error.length > 0 && (
+            <div className="bg-red-700 text-white font-bold px-4 py-2">
+              {error.map((e, index) => (
+                <div key={index}>{e}</div>
+              ))}
+            </div>
+          )}
           {success && (
             <div className="bg-green-700 text-white font-bold px-4 py-2">
-              Melding sendt vellykket!
+              {successMessage}
             </div>
           )}
         </div>

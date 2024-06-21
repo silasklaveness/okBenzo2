@@ -43,7 +43,7 @@ export default function Home() {
     return () => {
       window.removeEventListener("scroll", checkScrollTop);
     };
-  }, [showScroll]);
+  }, [checkScrollTop, showScroll]);
 
   return (
     <div className="h-full">

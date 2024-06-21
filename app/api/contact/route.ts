@@ -9,13 +9,13 @@ export async function POST(req: NextRequest) {
     await connectDB();
     await Contact.create({ fullname, email, message });
     return NextResponse.json({
-      msg: ["Message sent successfully"],
+      msg: ["Message Sent Successfully"],
       success: true,
     });
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
-      let errorList: string[] = [];
-      for (let e in error.errors) {
+      const errorList: string[] = [];
+      for (const e in error.errors) {
         errorList.push(error.errors[e].message);
       }
 
@@ -27,10 +27,10 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     } else {
-      console.error("Internal server error:", error);
+      console.error("Intern serverfeil:", error);
       return NextResponse.json(
         {
-          msg: ["An internal server error occurred"],
+          msg: ["En intern serverfeil oppstod"],
           success: false,
         },
         { status: 500 }

@@ -3,21 +3,20 @@ import mongoose, { Schema } from "mongoose";
 const contactSchema = new Schema({
   fullname: {
     type: String,
-    required: [true, "Name is required."],
+    required: [true, "Navn er påkrevd."],
     trim: true,
-    minLength: [2, "Name must be at least 2 characters."],
-    maxLength: [50, "Name must be less than 50 characters."],
+    minLength: [2, "Navn må være minst 2 bokstaver."],
+    maxLength: [25, "Navn må være mindre enn 25 tegn."],
   },
   email: {
     type: String,
-    required: [true, "Email is required."],
-    match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, "Invalid email address."],
+    required: [true, "Epost er påkrevd."],
+    match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, "Ugyldig epost."],
   },
   message: {
     type: String,
-    required: [true, "Message is required."],
+    required: [true, "Melding er påkrevd."],
   },
-
   date: {
     type: Date,
     default: Date.now,
