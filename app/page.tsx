@@ -80,7 +80,7 @@ export default function Home() {
                     variants={fadeInUp}
                   >
                     <Link
-                      href="#"
+                      href="/kontakt"
                       className="inline-flex h-10 items-center justify-center rounded-md bg-gray-50 px-8 text-sm font-medium text-gray-950 shadow transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
@@ -96,7 +96,7 @@ export default function Home() {
 
                     <button
                       onClick={toggleModal}
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-gray-50 px-8 text-sm font-medium text-gray-950 shadow transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
+                      className="hidden h-10 items-center justify-center rounded-md bg-gray-50 px-8 text-sm font-medium text-gray-950 shadow transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
                     >
                       BOT
                     </button>
@@ -324,73 +324,32 @@ export default function Home() {
                     <motion.div className="grid gap-1" variants={fadeInUp}>
                       <h3 className="text-xl font-bold">Vår vison</h3>
                       <p className="text-gray-500 dark:text-gray-400">
-                        Å styrke bedrifter av alle størrelser med toppmoderne
-                        web-løsninger som skaper suksess.
+                        Styrke bedrifter med innovative nettsider.
                       </p>
                     </motion.div>
                     <motion.div className="grid gap-1" variants={fadeInUp}>
                       <h3 className="text-xl font-bold">Våre verdier</h3>
                       <p className="text-gray-500 dark:text-gray-400">
-                        Integritet, innovasjon og en forpliktelse til
+                        Innovasjon, Samarbeid og en forpliktelse til
                         fortreffelighet i alt vi gjør.
                       </p>
                     </motion.div>
                     <motion.div className="grid gap-1" variants={fadeInUp}>
                       <h3 className="text-xl font-bold">Oss</h3>
                       <p className="text-gray-500 dark:text-gray-400">
-                        Engasjerte webutviklere som kontinuerlig oppdaterer seg
-                        med de nyeste metodene.
+                        Engasjerte webutviklere som kontinuerlig holder seg
+                        oppdatert på de nyeste teknologiene og metodene.
                       </p>
                     </motion.div>
                   </div>
                 </motion.div>
               </motion.div>
             </div>
-          </motion.section>
-          <motion.section
-            id="contact"
-            className="py-12 md:py-24 lg:py-32 text-center"
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
-          >
-            <div className="container mx-auto px-4 md:px-6">
-              <motion.div
-                className="flex flex-col items-center justify-center space-y-4"
-                variants={fadeInUp}
-              >
-                <div className="space-y-2">
-                  <motion.h2
-                    className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
-                    variants={fadeInUp}
-                  >
-                    Kom i kontakt
-                  </motion.h2>
-                  <motion.p
-                    className="max-w-[900px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
-                    variants={fadeInUp}
-                  >
-                    Har du et prosjekt i tankene? La oss diskutere hvordan vi
-                    kan hjelpe.
-                  </motion.p>
-                </div>
-                <motion.div
-                  className="mx-auto w-full max-w-sm space-y-2"
-                  variants={fadeInUp}
-                >
-                  <form className="flex flex-col gap-4">
-                    <Input type="text" placeholder="Navn" className="w-full" />
-                    <Input
-                      type="email"
-                      placeholder="Email"
-                      className="w-full"
-                    />
-                    <Textarea placeholder="Melding" className="w-full" />
-                    <Button type="submit">Send</Button>
-                  </form>
-                </motion.div>
-              </motion.div>
-            </div>
+            <Link href="/omoss" prefetch={false}>
+              <span className="inline-flex items-center justify-center rounded-md bg-gray-50 px-8 py-3 text-sm font-medium text-gray-950 shadow transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950">
+                Les mer
+              </span>
+            </Link>
           </motion.section>
         </main>
         <button

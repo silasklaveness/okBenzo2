@@ -7,6 +7,7 @@ import Image from "next/image";
 
 const links = [
   { url: "/", title: "Hjem" },
+  { url: "/omoss", title: "Om Oss" },
   { url: "/tjenester", title: "Tjenester" },
   { url: "/prosjekter", title: "Prosjekter" },
   { url: "/kontakt", title: "Kontakt" },

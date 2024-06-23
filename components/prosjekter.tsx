@@ -79,7 +79,7 @@ const PortfolioItem = ({
 const Portfolio = () => (
   <section
     id="portfolio"
-    className="py-12 md:py-24 lg:py-32 bg-gray-800 text-gray-50"
+    className="py-12 md:py-24 lg:py-32 bg-gray-950 text-gray-50"
   >
     <div className="container px-4 md:px-6">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -103,12 +103,6 @@ const Portfolio = () => (
         <PortfolioItem
           title="Ukjent"
           description="Ingen andre prosjekter å vise enn så lenge... Her vil muligens ditt prosjekt vises."
-          imageUrl="/placeholder.svg"
-          websiteUrl="https://example.com" // Replace with the actual URL
-        />
-        <PortfolioItem
-          title="Blog Platform"
-          description="A content-rich blog with a modern design and intuitive user interface."
           imageUrl="/placeholder.svg"
           websiteUrl="https://example.com" // Replace with the actual URL
         />

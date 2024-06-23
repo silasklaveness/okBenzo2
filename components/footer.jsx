@@ -6,172 +6,117 @@ const Footer = () => {
       <footer className="bg-gray-950 text-gray-50 p-6 md:py-12 w-full">
         <div className="container max-w-7xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
           <div className="grid gap-1">
-            <h3 className="font-semibold">Company</h3>
+            <h3 className="font-semibold">Sider</h3>
             <Link
-              href="#"
+              href="/"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              About
+              Hjem
             </Link>
             <Link
-              href="#"
+              href="/tjenester"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Team
+              Tjenester
             </Link>
             <Link
-              href="#"
+              href="/prosjekter"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Careers
+              Prosjekter
             </Link>
             <Link
-              href="#"
+              href="/kontakt"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Blog
-            </Link>
-          </div>
-          <div className="grid gap-1">
-            <h3 className="font-semibold">Services</h3>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Web Design
+              Kontakt
             </Link>
             <Link
-              href="#"
+              href="/omoss"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Web Development
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              SEO Optimization
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Consulting
+              Om Oss
             </Link>
           </div>
           <div className="grid gap-1">
-            <h3 className="font-semibold">Resources</h3>
+            <h3 className="font-semibold">Lovlig</h3>
             <Link
-              href="#"
+              href="/cookies"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Portfolio
+              Cookies
             </Link>
             <Link
-              href="#"
+              href="/privacy-policy"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Testimonials
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              FAQs
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Support
+              Personvernerklæring
             </Link>
           </div>
           <div className="grid gap-1">
-            <h3 className="font-semibold">Legal</h3>
+            <h3 className="font-semibold">Følg oss</h3>
             <Link
-              href="#"
-              className="hover:underline underline-offset-4"
+              href="https://www.facebook.com/profile.php?id=61561210144553"
+              className="hover:underline underline-offset-4 flex items-center gap-1"
               prefetch={false}
             >
-              Privacy Policy
+              Facebook
             </Link>
             <Link
-              href="#"
-              className="hover:underline underline-offset-4"
+              href="https://www.instagram.com"
+              className="hover:underline underline-offset-4 flex items-center gap-1"
               prefetch={false}
             >
-              Terms of Service
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Cookie Policy
+              Instagram
             </Link>
           </div>
           <div className="grid gap-1">
-            <h3 className="font-semibold">Contact</h3>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Email
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Phone
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Address
-            </Link>
-            <Link
-              href="#"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Social Media
-            </Link>
+            <h3 className="font-semibold">Kontaktinformasjon</h3>
+            <p>
+              Epost:{" "}
+              <a
+                href="mailto:kontakt@oceanedge.no"
+                className="hover:underline underline-offset-4"
+              >
+                kontakt@oceanedge.no
+              </a>
+            </p>
+            <p>
+              Telefon:{" "}
+              <a
+                href="tel:+4712345678"
+                className="hover:underline underline-offset-4"
+              >
+                +47 123 45 678
+              </a>
+            </p>
           </div>
         </div>
         <div className="container max-w-7xl mt-8 flex items-center justify-between">
           <p className="text-xs text-gray-400">
-            &copy; 2024 Acme Web. All rights reserved.
+            &copy; 2024 OceanEdge. Alle rettigheter reservert.
           </p>
           <div className="flex gap-4">
             <Link
-              href="#"
+              href="/privacy-policy"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Privacy Policy
+              Personvernerklæring
             </Link>
             <Link
-              href="#"
+              href="/terms-of-service"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
-              Terms of
+              Vilkår for bruk
             </Link>
           </div>
         </div>
