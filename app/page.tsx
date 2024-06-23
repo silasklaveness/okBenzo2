@@ -289,17 +289,15 @@ export default function Home() {
                     className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
                     variants={fadeInUp}
                   >
-                    About Us
+                    Om Oss
                   </motion.h2>
                   <motion.p
                     className="max-w-[900px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
                     variants={fadeInUp}
                   >
-                    Acme Web is a team of passionate web developers dedicated to
-                    creating exceptional digital experiences. With years of
-                    industry experience, we combine cutting-edge technologies
-                    with a user-centric approach to deliver innovative solutions
-                    that drive business growth.
+                    Oceanedge er en nyutviklet og foreløpig lokal
+                    teknologibedrift som spesialiserer seg på å levere
+                    innovative nettsideløsninger.
                   </motion.p>
                 </div>
               </motion.div>

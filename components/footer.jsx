@@ -53,7 +53,7 @@ const Footer = () => {
               Cookies
             </Link>
             <Link
-              href="/privacy-policy"
+              href="/personvernerklering"
               className="hover:underline underline-offset-4"
               prefetch={false}
             >
@@ -103,22 +103,6 @@ const Footer = () => {
           <p className="text-xs text-gray-400">
             &copy; 2024 OceanEdge. Alle rettigheter reservert.
           </p>
-          <div className="flex gap-4">
-            <Link
-              href="/privacy-policy"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Personvernerklæring
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Vilkår for bruk
-            </Link>
-          </div>
         </div>
       </footer>
     </div>
