@@ -1,6 +1,7 @@
 import Kart from "./components/kart";
 import Calender from "./components/calender";
 import Button from "./components/ui/button";
+import Image from "next/image";
 
 export default function Component() {
   return (
@@ -44,8 +45,8 @@ export default function Component() {
                 <Kart />
               </div>
               <div className="mt-4 lg:mt-0 lg:ml-6 text-black">
-                <h2 className="text-xl font-bold">Adresse</h2>
-                <p>Kongensgate 6, Sandefjord</p>
+                <h2 className="text-xl font-bold">Adresse:</h2>
+                <p>Kirkegata 8C, Sandefjord</p>
               </div>
             </div>
           </div>
@@ -62,26 +63,39 @@ export default function Component() {
               <div className="bg-gray-900 text-white p-8 rounded-lg shadow-md">
                 <ul className="space-y-4">
                   <li className="flex justify-between">
-                    <span>Klassisk hårklipp</span>
-                    <span>fra 550,-</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Barbering med kniv</span>
-                    <span>fra 450,-</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Skjeggtrimming</span>
-                    <span>fra 500,-</span>
+                    <span>Hårklipp</span>
+                    <span>fra 300,-</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Barneklipp</span>
-                    <span>fra 450,-</span>
+                    <span>fra 300,-</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Senior hårklipp</span>
-                    <span>fra 400,-</span>
+                    <span>Skinfade med taper</span>
+                    <span>fra 350,-</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Skjegg</span>
+                    <span>fra 200,-</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Hårvask</span>
+                    <span>fra 150,-</span>
                   </li>
                 </ul>
+              </div>
+              <div className="hidden md:block bg-gray-900 text-white p-8 rounded-lg shadow-md mt-8">
+                <h1 className="text-2xl font-bold mt-9">Frisør</h1>
+                <p className="mt-6">okBenzo</p>
+                <div className="flex justify-center mt-4">
+                  <Image
+                    src="/frisor.jpg"
+                    alt="Benzo"
+                    width={150}
+                    height={150}
+                    className="object-cover rounded-full"
+                  />
+                </div>
               </div>
             </div>
             <div className="w-full lg:w-1/2 lg:flex lg:justify-end mt-8 lg:mt-0">

@@ -12,24 +12,24 @@ export default function Component() {
       <div className="bg-gray-900 text-white p-8 rounded-lg shadow-md mt-8 md:mt-0">
         <ul className="space-y-4">
           <li className="flex justify-between">
-            <span>Klassisk hårklipp</span>
-            <span>fra 550,-</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Barbering med kniv</span>
-            <span>fra 450,-</span>
-          </li>
-          <li className="flex justify-between">
-            <span>Skjeggtrimming</span>
-            <span>fra 500,-</span>
+            <span>Hårklipp</span>
+            <span>fra 300,-</span>
           </li>
           <li className="flex justify-between">
             <span>Barneklipp</span>
-            <span>fra 450,-</span>
+            <span>fra 300,-</span>
           </li>
           <li className="flex justify-between">
-            <span>Senior hårklipp</span>
-            <span>fra 400,-</span>
+            <span>Skinfade med taper</span>
+            <span>fra 350,-</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Skjegg</span>
+            <span>fra 200,-</span>
+          </li>
+          <li className="flex justify-between">
+            <span>Hårvask</span>
+            <span>fra 150,-</span>
           </li>
         </ul>
       </div>

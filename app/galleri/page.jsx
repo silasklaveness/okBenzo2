@@ -27,7 +27,7 @@ export default function Component() {
               <h3 className="text-sm font-medium text-gray-900">
                 <a href="#">
                   <span aria-hidden="true" className="absolute inset-0" />
-                  Classic Fade
+                  Klassisk Fade
                 </a>
               </h3>
               <p className="mt-1 text-sm text-gray-500">Beskrivelse</p>
