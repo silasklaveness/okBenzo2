@@ -38,16 +38,16 @@ const PortfolioItem = ({
             transition={{ duration: 0.5 }}
             className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-black bg-opacity-25"
           >
-            <div className="relative w-full max-w-5xl">
+            <div className="relative w-full max-w-5xl bg-white rounded-xl shadow-lg">
               <button
                 onClick={() => setIsExpanded(false)}
-                className="h-10 w-[150px] absolute top-4 right-4 bg-black text-white rounded-xl"
+                className="h-10 w-[75px] absolute top-4 ml-2 bg-black text-white rounded-xl"
               >
                 Lukk
               </button>
               <iframe
                 src={websiteUrl}
-                className="w-full h-[80vh] rounded-xl"
+                className="w-full h-[80vh] rounded-b-xl"
                 style={{ border: "none" }}
               />
             </div>
@@ -88,7 +88,8 @@ const Portfolio = () => (
             Våre Prosjekter
           </h2>
           <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Sjekk ut noen av våre siste webutviklingsprosjekter.
+            Sjekk ut noen av våre siste webutviklingsprosjekter. Klikk på
+            bildene for å teste nettsidene.😊
           </p>
         </div>
       </div>
@@ -97,7 +98,7 @@ const Portfolio = () => (
           title="okBenzo Sandefjord frisør"
           description="En moderne og responsiv nettside for en ledende
                       frisørsalong.👑"
-          imageUrl="/image.png"
+          imageUrl="/okbenzopc.png"
           websiteUrl="https://okbenzo.vercel.app/" // Replace with the actual URL
         />
         <PortfolioItem

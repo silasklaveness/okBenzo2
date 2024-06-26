@@ -112,7 +112,7 @@ const ContactForm = () => {
                 Jeg samtykker til at mine personopplysninger blir behandlet i
                 samsvar med{" "}
                 <a
-                  href="/personvern"
+                  href="/personvernerklering"
                   className="text-blue-600 underline"
                   target="_blank"
                   rel="noopener noreferrer"

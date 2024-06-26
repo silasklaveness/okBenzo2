@@ -1,12 +1,5 @@
 "use client";
-import Homepage from "@/components/prosjekter";
+import PortfolioItem from "@/components/prosjekter";
+const Portfolio = () => <PortfolioItem />;
 
-const page = () => {
-  return (
-    <div>
-      <Homepage />
-    </div>
-  );
-};
-
-export default page;
+export default Portfolio;

@@ -1,9 +1,3 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/N4o0e1PgDw7
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Component() {
@@ -53,7 +47,7 @@ export default function Component() {
         </div>
       </section>
       <section className="w-full py-20 md:py-32 bg-[#1a1b1e] text-white">
-        <div className="container px-4 md:px-6 flex flex-col items-center text-center space-y-6">
+        <div className="container justify-center px-4 md:px-6 flex flex-col items-center text-center space-y-6">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Veiledende Prinsipper Som Definerer Vår Kultur
           </h2>
@@ -97,11 +91,12 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="flex flex-col items-center space-y-4">
               <Image
-                src="/silas.png"
+                src="/silas1.png"
                 width="120"
                 height="120"
-                alt="John Doe"
+                alt="Silas Kaae Klaveness"
                 className="rounded-full"
+                loading="lazy"
               />
               <div className="space-y-1">
                 <h3 className="text-xl font-bold">Silas Kaae Klaveness</h3>
@@ -121,6 +116,7 @@ export default function Component() {
                 height="120"
                 alt="Jane Smith"
                 className="rounded-full"
+                loading="lazy"
               />
               <div className="space-y-1">
                 <h3 className="text-xl font-bold">Ruben fugleset</h3>
