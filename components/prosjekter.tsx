@@ -105,7 +105,7 @@ const Portfolio = () => (
           title="Ukjent"
           description="Ingen andre prosjekter å vise enn så lenge... Her vil muligens ditt prosjekt vises."
           imageUrl="/placeholder.svg"
-          websiteUrl="https://example.com" // Replace with the actual URL
+          websiteUrl="https://www.oceanedge.no/kontakt" // Replace with the actual URL
         />
       </div>
     </div>
