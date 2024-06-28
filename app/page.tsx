@@ -1,14 +1,10 @@
 "use client";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Modal from "@/components/fjorddevbot"; // Adjust the import path as needed
 import { motion } from "framer-motion";
 import Button2 from "@/components/ui/button2";
-import Tjenester from "@/components/tjenester";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
