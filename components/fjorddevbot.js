@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button2";
+import { Button } from "@/components/ui/button";
 
 const backdrop = {
   visible: { opacity: 1 },

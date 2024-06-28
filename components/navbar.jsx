@@ -171,18 +171,18 @@ const Navbar = () => {
           </button>
           {open && (
             <motion.div
-              initial={{ y: "-100%", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "-100%", opacity: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="absolute top-0 left-0 w-screen h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white flex flex-col items-center justify-center gap-8 text-4xl"
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl font-sans"
               style={{ zIndex: 2 }}
             >
               {links.map((link, index) => (
                 <motion.div
                   key={link.url}
-                  initial={{ y: -50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  initial={{ x: 50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
                   transition={{
                     delay: 0.3 + index * 0.1,
                     duration: 0.5,

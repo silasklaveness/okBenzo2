@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Modal from "@/components/fjorddevbot"; // Adjust the import path as needed
 import { motion } from "framer-motion";
+import Button2 from "@/components/ui/button2";
+import Tjenester from "@/components/tjenester";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -79,13 +81,7 @@ export default function Home() {
                     className="flex flex-col gap-2 min-[400px]:flex-row"
                     variants={fadeInUp}
                   >
-                    <Link
-                      href="/kontakt"
-                      className="inline-flex h-10 items-center justify-center rounded-md bg-gray-50 px-8 text-sm font-medium text-gray-950 shadow transition-colors hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
-                      prefetch={false}
-                    >
-                      Kontakt oss
-                    </Link>
+                    <Button2 />
                     <Link
                       href="/omoss"
                       className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
@@ -104,7 +100,7 @@ export default function Home() {
                 </div>
                 <motion.div variants={fadeInUp}>
                   <Image
-                    src="/home.png"
+                    src="/hjembilde.png"
                     width="550"
                     height="550"
                     alt="Hero"
@@ -121,74 +117,41 @@ export default function Home() {
             animate="animate"
             variants={staggerContainer}
           >
-            <div className="container mx-auto px-4 md:px-6">
-              <motion.div
-                className="flex flex-col items-center justify-center space-y-4"
-                variants={fadeInUp}
-              >
-                <div className="space-y-2">
-                  <motion.h2
-                    className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
-                    variants={fadeInUp}
-                  >
-                    Våre tjenester
-                  </motion.h2>
-                  <motion.p
-                    className="max-w-[900px] mx-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
-                    variants={fadeInUp}
-                  >
-                    Vi tilbyr et bredt spekter av webutviklingstjenester for å
-                    støtte ditt prosjekt og hjelpe virksomheten din å blomstre
-                    på nettet.
-                  </motion.p>
+            <div className="max-w-6xl mx-auto p-8 bg-black shadow-lg rounded-lg">
+              <h1 className="text-5xl font-extrabold text-center mb-12 text-white">
+                Våre Tjenester
+              </h1>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
+                  <DribbbleIcon className="mx-auto mb-4 w-20 h-20 text-white" />
+                  <h2 className="text-3xl font-bold mb-2 text-white">
+                    Nettsidedesign
+                  </h2>
+                  <p className="mb-4 text-white">
+                    Skape visuelt imponerende og brukervennlige nettsteder.
+                  </p>
                 </div>
-              </motion.div>
-              <motion.div
-                className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12"
-                variants={fadeInUp}
-              >
-                <div className="flex flex-col justify-center space-y-4 mx-auto lg:mx-0">
-                  <div className="grid gap-4">
-                    <motion.div className="grid gap-1" variants={fadeInUp}>
-                      <h3 className="text-xl font-bold">Nettsidedesign</h3>
-                      <p className="text-gray-500 dark:text-gray-400">
-                        Skape visuelt imponerende og brukervennlige nettsteder.
-                      </p>
-                    </motion.div>
-                    <motion.div className="grid gap-1" variants={fadeInUp}>
-                      <h3 className="text-xl font-bold">Webutvikling</h3>
-                      <p className="text-gray-500 dark:text-gray-400">
-                        Integrasjon av moderne løsninger i din nettside for å
-                        hjelpe din virksomhet.
-                      </p>
-                    </motion.div>
-                    <motion.div className="grid gap-1" variants={fadeInUp}>
-                      <h3 className="text-xl font-bold">SEO-optimalisering</h3>
-                      <p className="text-gray-500 dark:text-gray-400">
-                        Forbedre din nettsides synlighet og rangering i
-                        søkemotorer for å tiltrekke flere besøkende.
-                      </p>
-                    </motion.div>
-                  </div>
-                  <motion.div className="mt-4" variants={fadeInUp}>
-                    <a
-                      href="/tjenester"
-                      className="inline-flex items-center justify-center px-4 py-2 text-base font-medium text-white bg-black border border-transparent rounded-md hover:bg-blue-700"
-                    >
-                      Les mer
-                    </a>
-                  </motion.div>
+                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
+                  <WebhookIcon className="mx-auto mb-4 w-20 h-20 text-white" />
+                  <h2 className="text-3xl font-bold mb-2 text-white">
+                    Webutvikling
+                  </h2>
+                  <p className="mb-4 text-white">
+                    Integrasjon av moderne løsninger i din nettside for å hjelpe
+                    din virksomhet.
+                  </p>
                 </div>
-                <motion.div variants={fadeInUp}>
-                  <Image
-                    src="/tjenesterhome.png"
-                    width="550"
-                    height="310"
-                    alt="Services"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                  />
-                </motion.div>
-              </motion.div>
+                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
+                  <SearchCodeIcon className="mx-auto mb-4 w-20 h-20 text-white" />
+                  <h2 className="text-3xl font-bold mb-2 text-white">
+                    SEO Optimalisering
+                  </h2>
+                  <p className="mb-4 text-white">
+                    Forbedre din nettsides synlighet og rangering i søkemotorer
+                    for å tiltrekke flere besøkende.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.section>
           <motion.section
@@ -361,5 +324,70 @@ export default function Home() {
         </button>
       </div>
     </div>
+  );
+}
+
+function DribbbleIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
+      <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
+      <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
+    </svg>
+  );
+}
+
+function SearchCodeIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width={props.width || "24"}
+      height={props.height || "24"}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m13 13.5 2-2.5-2-2.5" />
+      <path d="m21 21-4.3-4.3" />
+      <path d="M9 8.5 7 11l2 2.5" />
+      <circle cx="11" cy="11" r="8" />
+    </svg>
+  );
+}
+
+function WebhookIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width={props.width || "24"}
+      height={props.height || "24"}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2" />
+      <path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06" />
+      <path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8" />
+    </svg>
   );
 }
