@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Kart from "@/components/kart";
 
 export default function Component() {
   return (
@@ -19,13 +20,9 @@ export default function Component() {
                 </p>
               </div>
             </div>
-            <Image
-              src="/placeholder.svg"
-              width="550"
-              height="550"
-              alt="About"
-              className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full"
-            />
+            <div className="h-64 lg:h-[450px] lg:w-[500px] rounded-lg overflow-hidden shadow-md">
+              <Kart />
+            </div>
           </div>
         </div>
       </section>

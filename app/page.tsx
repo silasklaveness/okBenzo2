@@ -5,6 +5,10 @@ import { useState, useEffect } from "react";
 import Modal from "@/components/fjorddevbot"; // Adjust the import path as needed
 import { motion } from "framer-motion";
 import Button2 from "@/components/ui/button2";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+import Kart from "@/components/kart";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -24,6 +28,7 @@ export default function Home() {
     setShowModal(!showModal);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const checkScrollTop = () => {
     if (!showScroll && window.scrollY > 300) {
       setShowScroll(true);
@@ -55,7 +60,7 @@ export default function Home() {
             animate="animate"
             variants={staggerContainer}
           >
-            <div className="container px-4 md:px-6">
+            <div className="container px-4 md:px-6 md:mx-6 lg:mx-10">
               <motion.div
                 className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center"
                 variants={fadeInUp}
@@ -80,7 +85,7 @@ export default function Home() {
                     <Button2 />
                     <Link
                       href="/omoss"
-                      className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-black px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       Finn ut mer
@@ -108,28 +113,28 @@ export default function Home() {
           </motion.section>
           <motion.section
             id="services"
-            className="bg-gray-100 dark:bg-gray-800 py-12 md:py-24 lg:py-32 text-center"
+            className="bg-gray-100 dark:bg-gray-800 text-center"
             initial="initial"
             animate="animate"
             variants={staggerContainer}
           >
-            <div className="max-w-6xl mx-auto p-8 bg-black shadow-lg rounded-lg">
-              <h1 className="text-5xl font-extrabold text-center mb-12 text-white">
+            <div className="mw-auto mh-auto p-8 bg-gray-950 shadow-lg">
+              <h1 className="text-3xl font-extrabold text-center mb-12 text-white">
                 Våre Tjenester
               </h1>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
+                <div className="text-center p-6 bg-black border border-white shadow-lg hover:bg-gray-800 transition-colors duration-300">
                   <DribbbleIcon className="mx-auto mb-4 w-20 h-20 text-white" />
-                  <h2 className="text-3xl font-bold mb-2 text-white">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white ">
                     Nettsidedesign
                   </h2>
                   <p className="mb-4 text-white">
                     Skape visuelt imponerende og brukervennlige nettsteder.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
+                <div className="text-center p-6 bg-black border border-white hover:border-blue-500 rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
                   <WebhookIcon className="mx-auto mb-4 w-20 h-20 text-white" />
-                  <h2 className="text-3xl font-bold mb-2 text-white">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">
                     Webutvikling
                   </h2>
                   <p className="mb-4 text-white">
@@ -139,7 +144,7 @@ export default function Home() {
                 </div>
                 <div className="text-center p-6 bg-black border border-white rounded-lg shadow-md hover:bg-gray-800 transition-colors duration-300">
                   <SearchCodeIcon className="mx-auto mb-4 w-20 h-20 text-white" />
-                  <h2 className="text-3xl font-bold mb-2 text-white">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">
                     SEO Optimalisering
                   </h2>
                   <p className="mb-4 text-white">
@@ -157,7 +162,7 @@ export default function Home() {
             animate="animate"
             variants={staggerContainer}
           >
-            <div className="container px-4 md:px-6">
+            <div className="container px-4 md:px-6 md:mx-10 lg:mx-24">
               <motion.div
                 className="flex flex-col items-center justify-center space-y-4 text-center"
                 variants={fadeInUp}
@@ -177,47 +182,77 @@ export default function Home() {
                   </motion.p>
                 </div>
               </motion.div>
-              <motion.div
-                className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12"
-                variants={fadeInUp}
+              <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                pagination={{ clickable: true }}
+                navigation
+                modules={[Autoplay, Pagination, Navigation]}
+                className="max-w-5xl mx-auto"
               >
-                <motion.div variants={fadeInUp}>
-                  <Image
-                    src="/image.png"
-                    width="550"
-                    height="310"
-                    alt="Portfolio"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  />
-                </motion.div>
-                <motion.div
-                  className="flex flex-col justify-center space-y-4"
-                  variants={fadeInUp}
-                >
-                  <div className="grid gap-4">
-                    <motion.div className="grid gap-1" variants={fadeInUp}>
-                      <h3 className="text-xl font-bold">
-                        okBenzo Frisør Sandefjord
-                      </h3>
-                      <p className="text-gray-400">
-                        En moderne og responsiv nettside for en ledende
-                        frisørsalong.👑
-                      </p>
-                    </motion.div>
-                    <motion.div className="grid gap-1" variants={fadeInUp}>
-                      <h3 className="text-xl font-bold">I prosess ...</h3>
-                      <p className="text-gray-400"></p>
-                    </motion.div>
-                    <motion.div className="grid gap-1" variants={fadeInUp}>
-                      <h3 className="text-xl font-bold">Blog Platform</h3>
-                      <p className="text-gray-400">
-                        A content-rich blog with a modern design and intuitive
-                        user interface.
-                      </p>
-                    </motion.div>
-                  </div>
-                </motion.div>
-              </motion.div>
+                <SwiperSlide>
+                  <motion.div
+                    className="grid lg:grid-cols-2 gap-6 py-12 lg:gap-12"
+                    variants={fadeInUp}
+                  >
+                    <Image
+                      src="/okbenzopc.png"
+                      width="550"
+                      height="310"
+                      alt="Portfolio"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                    />
+                    <div className="flex flex-col justify-center space-y-4">
+                      <div className="grid gap-4">
+                        <div className="grid gap-1">
+                          <h3 className="text-xl font-bold">
+                            okBenzo Frisør Sandefjord
+                          </h3>
+                          <p className="text-gray-400">
+                            En moderne og responsiv nettside for en ledende
+                            frisørsalong.👑
+                          </p>
+                          <button className="flex items-center justify-center mt-2">
+                            <HeartIcon className="w-6 h-6 text-red-500" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <motion.div
+                    className="grid lg:grid-cols-2 gap-6 py-12 lg:gap-12"
+                    variants={fadeInUp}
+                  >
+                    <Image
+                      src="/okbenzopc.png"
+                      width="550"
+                      height="310"
+                      alt="Portfolio"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                    />
+                    <div className="flex flex-col justify-center space-y-4">
+                      <div className="grid gap-4">
+                        <div className="grid gap-1">
+                          <h3 className="text-xl font-bold">
+                            Ikke noen flere prosjekter enn så lenge.
+                          </h3>
+                          <p className="text-gray-400">😊</p>
+                          <button className="flex items-center justify-center mt-2">
+                            <HeartIcon className="w-6 h-6 text-red-500" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </SwiperSlide>
+              </Swiper>
               <motion.div
                 className="flex justify-center mt-8"
                 variants={fadeInUp}
@@ -264,15 +299,9 @@ export default function Home() {
                 className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12"
                 variants={fadeInUp}
               >
-                <motion.div variants={fadeInUp}>
-                  <Image
-                    src="/placeholder.svg"
-                    width="550"
-                    height="310"
-                    alt="About"
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  />
-                </motion.div>
+                <div className="h-64 lg:h-[450px] lg:w-[500px] rounded-lg overflow-hidden shadow-md">
+                  <Kart />
+                </div>
                 <motion.div
                   className="flex flex-col justify-center space-y-4 mx-auto lg:mx-0"
                   variants={fadeInUp}
@@ -384,6 +413,25 @@ function WebhookIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
       <path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2" />
       <path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06" />
       <path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8" />
+    </svg>
+  );
+}
+
+function HeartIcon(props: React.SVGProps<SVGSVGElement>): JSX.Element {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width={props.width || "24"}
+      height={props.height || "24"}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
     </svg>
   );
 }

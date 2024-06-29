@@ -8,7 +8,7 @@ const Button2 = () => {
   };
 
   return (
-    <div className="relative inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 overflow-hidden">
+    <div className="relative inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-black px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 overflow-hidden">
       <motion.button
         whileTap={{ scale: 0.97 }}
         className="relative text-white w-full h-full"
