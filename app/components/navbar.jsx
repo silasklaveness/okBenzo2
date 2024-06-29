@@ -64,17 +64,17 @@ const Navbar = () => {
     <div className="relative">
       <header className="bg-white text-gray-900 shadow-lg px-4 md:px-6 py-4 flex items-center justify-between border-b border-gray-300">
         <Link href="./" className="flex items-center gap-2" prefetch={false}>
-          <Image src="/logo.png" alt="logo" height={50} width={50} />
+          <Image src="/benzologo.png" alt="logo" height={50} width={50} />
           <span className="text-lg text-black md:text-xl lg:text-2xl font-semibold">
-            okBenzo
+            OKᗷEᑎᘔO
           </span>
         </Link>
-        <nav className="hidden md:flex gap-10">
+        <nav className="hidden md:flex gap-14">
           {links.map((link) => (
             <Link
               key={link.url}
               href={link.url}
-              className="text-lg text-black md:text-base lg:text-lg font-medium hover:underline underline-offset-4"
+              className="text-lg text-black md:text-base lg:text-2xl font-medium hover:underline underline-offset-4"
               prefetch={false}
             >
               {link.title}

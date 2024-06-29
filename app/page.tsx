@@ -5,17 +5,15 @@ import Image from "next/image";
 
 export default function Component() {
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-white mt-6 md:mt-11">
-      <div className="absolute inset-0 bg-white opacity-0"></div>
-      {/* Fully opaque background overlay */}
+    <main className="md:pt-6 lg:pt-11 relative min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-gray-100">
       <div className="relative z-10 w-full">
-        <div className="container mx-auto px-6 py-8 bg-white shadow-md rounded-lg mb-12">
+        <div className="container mx-auto px-6 py-8 bg-white shadow-lg rounded-lg mb-12">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 pr-6 mb-6 md:mb-5">
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-black leading-tight">
-                Velkommen til okBenzo - Sandefjords frisør
+              <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+                Velkommen til okBenzo - Sandefjord frisør
               </h1>
-              <div className="mt-6 text-black">
+              <div className="mt-6 text-gray-800">
                 <h2 className="text-2xl font-bold mb-4">Åpningstider</h2>
                 <ul className="space-y-2">
                   <li>
@@ -35,7 +33,7 @@ export default function Component() {
               </div>
               <p className="text-gray-600 text-sm mt-4">
                 Ring oss på:{" "}
-                <a href="tel:+4798000000" className="text-black font-medium">
+                <a href="tel:+4798000000" className="text-blue-600 font-medium">
                   123-456-789
                 </a>
               </p>
@@ -44,8 +42,8 @@ export default function Component() {
               <div className="h-64 lg:h-[450px] lg:w-[500px] rounded-lg overflow-hidden shadow-md">
                 <Kart />
               </div>
-              <div className="mt-4 lg:mt-0 lg:ml-6 text-black">
-                <h2 className="text-xl font-bold">Adresse:</h2>
+              <div className="mt-4 lg:mt-0 lg:ml-6 text-gray-800">
+                <h2 className="text-2xl font-bold">Adresse:</h2>
                 <p>Kirkegata 8C, Sandefjord</p>
               </div>
             </div>
@@ -54,7 +52,7 @@ export default function Component() {
         <section className="container mx-auto bg-white rounded-lg shadow-xl p-6 md:p-10 text-center mb-11">
           <div className="flex flex-col lg:flex-row lg:space-x-8">
             <div className="lg:w-1/2 items-center">
-              <h2 className="text-2xl font-bold mb-4 text-black mt-10">
+              <h2 className="text-3xl font-bold mb-4 text-gray-900 mt-10">
                 Våre Priser
               </h2>
               <p className="text-gray-700 mb-6">
