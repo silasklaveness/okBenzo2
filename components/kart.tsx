@@ -36,6 +36,6 @@ const Kart = () => {
       Google maps
     </div>
   );
-};
+};  
 
 export default Kart;
