@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"; // Importer Image-komponenten fra next/image
 
 const Footer = () => {
   return (
@@ -20,11 +21,23 @@ const Footer = () => {
           </Link>
         </div>
         <div className="text-center sm:text-right text-xs">
-          <p>© 2023 Din bedrift</p>
-          <p>Adresse: Kirkegata8C</p>
+          <p>© 2023 okBenzo</p>
+          <p>Adresse: Kirkegata 8C</p>
           <p>Telefon: +123456789</p>
           <p>E-post: kontakt@dinbedrift.no</p>
         </div>
+        <Link
+          className="flex items-center mt-4 sm:mt-0"
+          href="https://www.oceanedge.no"
+        >
+          <Image
+            src="/logofirkantbak.png" // Stien til logoen din i public-mappen
+            alt="OceanEdge logo"
+            width={25} // Juster størrelsen etter behov
+            height={25}
+          />
+          <span className="ml-2 text-xs">Nettside levert av OceanEdge</span>
+        </Link>
       </div>
     </footer>
   );

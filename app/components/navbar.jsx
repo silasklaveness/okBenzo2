@@ -119,7 +119,7 @@ const Navbar = () => {
                   <Link href={link.url} key={link.title} prefetch={false}>
                     <span
                       onClick={() => handleClick(link.url)}
-                      className="block py-3 px-4 text-xl md:text-2xl lg:text-lg font-semibold tracking-wide text-gray-900 hover:text-blue-600 transition duration-300 ease-in-out transform hover:scale-105 rounded-md hover:bg-gray-100"
+                      className="block py-5 px-2 text-xl md:text-2xl lg:text-lg font-semibold tracking-wide text-gray-900 hover:text-blue-600 transition duration-300 ease-in-out transform hover:scale-105 rounded-md hover:bg-gray-100"
                     >
                       {link.title}
                     </span>

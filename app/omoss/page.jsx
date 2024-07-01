@@ -14,11 +14,11 @@ export default function Component() {
           </p>
         </div>
         <Image
-          src="/bakgrunn.png"
+          src="/salong.jpg"
           alt="Barbering"
           className="rounded-lg shadow-md mt-8 md:mt-0"
-          width={800}
-          height={600}
+          width={500}
+          height={300}
         />
       </div>
     </div>

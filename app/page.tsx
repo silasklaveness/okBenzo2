@@ -1,9 +1,37 @@
+"use client";
 import Kart from "./components/kart";
 import Calender from "./components/calender";
 import Button from "./components/ui/button";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Component() {
+  const [showModal, setShowModal] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const checkScrollTop = () => {
+    if (!showScroll && window.scrollY > 300) {
+      setShowScroll(true);
+    } else if (showScroll && window.scrollY <= 300) {
+      setShowScroll(false);
+    }
+  };
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop);
+    return () => {
+      window.removeEventListener("scroll", checkScrollTop);
+    };
+  }, [checkScrollTop, showScroll]);
   return (
     <main className="md:pt-6 lg:pt-11 relative min-h-screen flex flex-col items-center justify-center bg-center bg-cover bg-gray-100">
       <div className="relative z-10 w-full">
@@ -103,6 +131,15 @@ export default function Component() {
             </div>
           </div>
         </section>
+        <button
+          className={`fixed bottom-5 right-5 z-50 p-2 md:p-3 lg:p-4 text-2xl font-bold rounded-full bg-blue-500 text-white shadow-lg transition-opacity duration-300 ${
+            showScroll ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={scrollTop}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
       </div>
     </main>
   );
