@@ -36,7 +36,7 @@ export default function Component() {
 
       <div className="bg-muted rounded-lg p-6">
         <div className="bg-background rounded-md">
-          <Calender url="https://calendly.com/pokesilas/bestill-time?month=2024-06" />
+          <Calender url="https://calendly.com/okbenzowelish/30min" />
         </div>
       </div>
     </div>

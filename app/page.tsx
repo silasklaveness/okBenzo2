@@ -126,7 +126,7 @@ export default function Component() {
             </div>
             <div className="w-full lg:w-1/2 lg:flex lg:justify-end mt-8 lg:mt-0">
               <div className="w-full">
-                <Calender url="https://calendly.com/pokesilas/bestill-time?month=2024-06" />
+                <Calender url="https://calendly.com/okbenzowelish/30min" />
               </div>
             </div>
           </div>
