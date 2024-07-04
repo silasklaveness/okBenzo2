@@ -23,8 +23,8 @@ const Footer = () => {
         <div className="text-center sm:text-right text-xs">
           <p>© 2023 okBenzo</p>
           <p>Adresse: Kirkegata 8C</p>
-          <p>Telefon: +123456789</p>
-          <p>E-post: kontakt@dinbedrift.no</p>
+          <p>Telefon: +47 912 62 695</p>
+          <p>E-post: okbenzowelish@gmail.com</p>
         </div>
         <Link
           className="flex items-center mt-4 sm:mt-0"

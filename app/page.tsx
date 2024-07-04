@@ -45,11 +45,12 @@ export default function Component() {
                 <h2 className="text-2xl font-bold mb-4">Åpningstider</h2>
                 <ul className="space-y-2">
                   <li>
-                    <span className="font-bold">Mandag-fredag:</span> 09:00 -
-                    18:00
+                    <span className="font-bold">Mandag-Tirsdag, Torsdag:</span>{" "}
+                    10:00 - 18:00
                   </li>
                   <li>
-                    <span className="font-bold">Lørdag:</span> 09:00 - 15:00
+                    <span className="font-bold">Onsdag, Fredag-Lørdag:</span>{" "}
+                    11:00 - 18:00
                   </li>
                   <li>
                     <span className="font-bold">Søndag:</span> Stengt
