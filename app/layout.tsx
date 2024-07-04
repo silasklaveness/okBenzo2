@@ -7,11 +7,20 @@ import Navbar from "./components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.okbenzo.no"),
+  keywords: [
+    "okbenzo",
+    "benzoprodukt",
+    "frisør",
+    "sandefjord",
+    "ok benzo",
+    "okbenzo no",
+  ],
   title: {
     default: "okBenzo",
     template: "%s | okBenzo",
   },
-  description: "okBenzo - Sandefjord Frisør",
+  description: "Kjapp og billig hårklipp i Sandefjord",
 };
 
 export default function RootLayout({
