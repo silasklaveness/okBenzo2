@@ -7,8 +7,11 @@ import Navbar from "./components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "okBenzo",
-  description: "Sandefjord Frisør",
+  title: {
+    default: "okBenzo",
+    template: "%s | okBenzo",
+  },
+  description: "okBenzo - Sandefjord Frisør",
 };
 
 export default function RootLayout({
@@ -18,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <div className="relative">
           <Navbar />
         </div>

@@ -62,7 +62,7 @@ export default function Component() {
               <p className="text-gray-600 text-sm mt-4">
                 Ring oss på:{" "}
                 <a href="tel:+4798000000" className="text-blue-600 font-medium">
-                  123-456-789
+                  +47 912 62 695
                 </a>
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function Component() {
                 <p className="mt-6">okBenzo</p>
                 <div className="flex justify-center mt-4">
                   <Image
-                    src="/frisor.jpg"
+                    src="/profilbilde.jpg"
                     alt="Benzo"
                     width={150}
                     height={150}
