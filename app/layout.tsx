@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "okbenzo no",
   ],
   title: {
-    default: "okBenzo",
+    default: "okBenzo | Kjapp og billig hårklipp i Sandefjord",
     template: "%s | okBenzo",
   },
   description: "Kjapp og billig hårklipp i Sandefjord",
