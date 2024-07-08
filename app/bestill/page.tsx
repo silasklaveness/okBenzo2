@@ -30,7 +30,7 @@ export default function Component() {
           </li>
           <li className="flex justify-between">
             <span>Skjegg</span>
-            <span>fra 200,-</span>
+            <span>fra 150,-</span>
           </li>
           <li className="flex justify-between">
             <span>Hårvask</span>
